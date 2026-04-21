@@ -175,7 +175,7 @@ mininet> h1 ping h3
 
 **Screenshot — Successful ping h1 → h3:**
 
-![h1 ping h3 success](screenshots/ping_h1_h3.png)
+![h1 ping h3 success](Screenshots/ping_h1_h3.png)
 
 - ✔ 0% packet loss
 - ✔ Static path `h1 → s1 → s3 → s4 → h3` followed
@@ -191,7 +191,7 @@ mininet> h1 ping h2
 
 **Screenshot — Blocked ping h1 → h2:**
 
-![h1 ping h2 blocked](screenshots/ping_h1_h2.png)
+![h1 ping h2 blocked](Screenshots/ping_h1_h2.png)
 
 - ❌ 100% packet loss — "Destination Host Unreachable"
 - ✔ Confirms `s2` path is intentionally not programmed by the controller
@@ -208,7 +208,7 @@ mininet> sh ovs-ofctl -O OpenFlow13 dump-flows s4
 
 **Screenshot — Flow table dump:**
 
-![Flow table dump](screenshots/flow_table.png)
+![Flow table dump](Screenshots/flow_table.png)
 
 - ✔ Priority=10 rules installed for static path
 - ✔ Priority=0 table-miss rule sends unmatched packets to controller
@@ -225,7 +225,7 @@ mininet> h1 ping h3
 
 **Screenshot — Ping failure after link down:**
 
-![Failure scenario](screenshots/failure_scenario.png)
+![Failure scenario](Screenshots/failure_scenario.png)
 
 - ❌ 100% packet loss after link brought down
 - ✔ No automatic rerouting — confirms **static routing behavior**
@@ -237,7 +237,7 @@ mininet> h1 ping h3
 
 **Screenshot — Ryu controller terminal:**
 
-![Controller log](screenshots/controller_log.png)
+![Controller log](Screenshots/controller_log.png)
 
 Shows flow installations: `Flow: s1 1 -> 3`, `Flow: s3 1 -> 2`, `Flow: s4 1 -> 2`, etc.
 
